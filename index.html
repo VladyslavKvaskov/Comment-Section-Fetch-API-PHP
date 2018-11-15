@@ -1,0 +1,44 @@
+﻿<!Doctype html>
+<html lang="ru">
+<head>
+    <title>Comments</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+   
+
+</head>
+<body>
+    <header>
+        <center><h1>Comment Section</h1></center>
+    </header>
+    <main>
+        <form id="post_form" role="form" aria-label="post comment">
+            <label id="nameLabel" for="name">Name:</label>
+            <br>
+            <input type="text" id="name" maxlength="17" required>
+            <br>
+            <label id="commentLabel" for="comment">Comment:</label>
+            <br>
+            <textarea id="comment" maxlength="3000" required></textarea>
+            <br>
+            <input type="submit" id="submit" value="Post">
+        </form>
+
+        <div id="comments"></div>
+    </main>
+    <footer>
+        <center>
+            Developed By Vlad Kvaskov
+        </center>
+    </footer>
+    <!--
+        async defer greatly boosts the perfomance! But it should be used only if the recourse is render-blocking.
+        In our case it's reduntant to use it since our HTML gets parsed before it requests this file.
+        We link the js file at the end of the body, so it's not render-blocking.
+    -->
+    
+    <script type="application/javascript" charset="utf-8" src="js/post_to_php.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+</body>
+</html>
