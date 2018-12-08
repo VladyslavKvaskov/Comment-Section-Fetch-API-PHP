@@ -13,7 +13,7 @@ In this repository, I developed a PHP file using which I can communicate with a 
 	       },
 	       //body should contain sql=SQL_COMMAND_TO_BE_EXECUTED
 	       body: 'sql=SELECT * FROM comments ORDER BY comment_id DESC;'
-	       }).then(response => response.json()).then(comments => {
+	       }).then(response => response.json()).then(data => {
 		    //handle data of the response     `
 		  }
 	});
