@@ -6,6 +6,7 @@ In this repository, I developed a PHP file using which I can communicate with a 
 ### Here is a short code on how to do that.
 
 fetch('comments.php', {
+
       method: 'POST',
       headers: {
       'Accept': 'application/json',
