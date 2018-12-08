@@ -5,7 +5,7 @@ In this repository, I developed a PHP file using which I can communicate with a 
 
 ### Here is a short code on how to do that.
 
-`fetch('comments.php', {`
+fetch('comments.php', {`
       `method: 'POST',`
       `headers: {`
       `'Accept': 'application/json',`
@@ -16,7 +16,7 @@ In this repository, I developed a PHP file using which I can communicate with a 
       `}).then(response => response.json()).then(comments => {`
             `//handle data of the response     `
           `}`
-`});`
+`});
 
 ### And here is the contents of comments.php
 
