@@ -5,18 +5,18 @@ In this repository, I developed a PHP file using which I can communicate with a 
 
 ### Here is a short code on how to do that.
 
-fetch('comments.php', {`
-      `method: 'POST',`
-      `headers: {`
-      `'Accept': 'application/json',`
-      `'Content-Type': 'application/x-www-form-urlencoded'`
-      `},`
-      `//body should contain sql=YOUR_SQL_COMMAND`
-      `body: 'sql=SELECT * FROM comments ORDER BY comment_id DESC;'`
-      `}).then(response => response.json()).then(comments => {`
-            `//handle data of the response     `
-          `}`
-`});
+fetch('comments.php', {
+      method: 'POST',
+      headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      //body should contain sql=SQL_COMMAND_TO_BE_EXECUTED
+      body: 'sql=SELECT * FROM comments ORDER BY comment_id DESC;'
+      }).then(response => response.json()).then(comments => {
+            //handle data of the response     `
+          }
+});
 
 ### And here is the contents of comments.php
 
