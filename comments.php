@@ -1,9 +1,9 @@
 <?php
 header('Content-Type: text/plain; charset=utf-8');
-$servername = '50.62.209.152:3306';
-$username = 'COMMENTS';
-$password = '19952406Vladvkvk!';
-$dbname = 'comments';
+$servername = 'localhost';
+$username = 'VladK';
+$password = 'Zxcvb';
+$dbname = 'comments_cross';
 $outp = '';
 
 //get the sql command sent from fetch API
