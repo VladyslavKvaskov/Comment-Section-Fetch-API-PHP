@@ -22,25 +22,32 @@ In this repository, I developed a PHP file using which I can communicate with a 
 
 	<?php
 	header('Content-Type: text/plain; charset=utf-8');
-	$servername = '50.62.209.152:3306';
-	$username = 'COMMENTS';
-	$password = '19952406Vladvkvk!';
-	$dbname = 'comments';
+	$servername = 'localhost';
+	$username = 'VladK';
+	$password = 'Zxcvb';
+	$dbname = 'comments_cross';
 	$outp = '';
+
 	//get the sql command sent from fetch API
 	$sql = $_POST['sql'];
+
 	//Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);
+
 	// Check connection
 	if ($conn->connect_error) {
 	    die('Connection failed: ' . $conn->connect_error);
 	}
+
 	//Set the charset to utf-8 so that the data from the database will be displayed correctly if it contains unicode characters
 	$conn->set_charset('utf8');
+
 	//prepare an sql command for execution
 	$stmt = $conn->prepare($sql);
+
 	//execute the sql command
 	$stmt->execute();
+
 	//check if sql contains SELECT
 	if(strpos('s' . $sql, 'SELECT') !== false) {
 		//get result of execution
@@ -59,6 +66,7 @@ In this repository, I developed a PHP file using which I can communicate with a 
 		$result = $stmt->get_result();
 		$outp = $result->fetch_all(MYSQLI_ASSOC);
 	}
+
 	//display the result of operation in JSON format
 	echo json_encode($outp);
 	$conn->close();
